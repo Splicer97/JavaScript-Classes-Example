@@ -66,6 +66,12 @@ class Box extends Component {
 		this.$el.style.backgroundColor = options.backgroundColor
 	}
 }
+class Circle extends Box {
+	constructor(options) {
+		super(options)
+		this.$el.style.borderRadius = "50%"
+	}
+}
 
 const box1 = new Box({
 	selector: "#box1",
@@ -76,4 +82,9 @@ const box2 = new Box({
 	selector: "#box2",
 	size: 300,
 	backgroundColor: "blue"
+})
+const circle1 = new Circle({
+	selector: "#circle1",
+	size: 90,
+	backgroundColor: "green"
 })
